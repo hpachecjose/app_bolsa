@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Painel de Clima</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="estilo.css">
+
+  <style>
+    /* ... mantenha aqui o MESMO CSS que enviei antes ... */
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-badge"></div>
+      <span>WeatherBoard</span>
+    </div>
+    <nav>
+      <a href="#" class="active">Clima atual</a>
+      <a href="#">Previsão</a>
+      <a href="#">Alertas</a>
+    </nav>
+  </header>
+
+  <div class="container app-layout">
+    <div class="row g-3">
+      <!-- Sider -->
+      <aside class="col-lg-3">
+        <div class="app-sider">
+          <div class="sider-title">Navegação</div>
+          <ul class="sider-menu">
+            <li><a href="#" class="sider-link active"><span class="icon">☀️</span><span>Resumo do dia</span></a></li>
+            <li><a href="#" class="sider-link"><span class="icon">🕒</span><span>Por hora</span></a></li>
+            <li><a href="#" class="sider-link"><span class="icon">📅</span><span>Próximos dias</span></a></li>
+            <li><a href="#" class="sider-link"><span class="icon">⚠️</span><span>Alertas</span></a></li>
+          </ul>
+
+          <div class="sider-title mt-4">Local</div>
+          <div class="px-3">
+            <div class="metric-label mb-1">Cidade</div>
+            <div class="metric-value" id="cidade">Carregando...</div>
+            <div class="metric-chip mt-2" id="atualizado">Atualizando...</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <main class="col-lg-9">
+        <div class="row g-3">
+          <!-- Clima atual -->
+          <section class="col-12">
+            <div class="card-glass">
+              <div class="card-glass-header">
+                <div>
+                  <div class="card-glass-title">Clima agora</div>
+                  <div class="temp-secondary mt-1" id="dataDescricao">
+                    Carregando dados de clima...
+                  </div>
+                </div>
+                <span class="pill pill-green" id="statusClima">--</span>
+              </div>
+
+              <div class="row align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="temp-main" id="tempAtual">--°</div>
+                  <div class="temp-secondary mt-2">
+                    Sensação: <strong id="sensacao">--°</strong><br />
+                    Ponto de orvalho: <span id="pontoOrvalho">--°</span>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="row gy-2">
+                    <div class="col-6 col-sm-4">
+                      <div class="metric-label">Umidade</div>
+                      <div class="metric-value" id="umidade">--%</div>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="metric-label">Pressão</div>
+                      <div class="metric-value" id="pressao">-- hPa</div>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="metric-label">Vento</div>
+                      <div class="metric-value" id="ventoVel">-- km/h</div>
+                      <span class="metric-chip mt-1 d-inline-block" id="ventoDir">--</span>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="metric-label">Precipitação</div>
+                      <div class="metric-value" id="precipitacao">-- mm</div>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                      <div class="metric-label">Índice UV</div>
+                      <div class="metric-value" id="uv">--</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Previsão horária -->
+          <section class="col-md-6">
+            <div class="card-glass">
+              <div class="card-glass-header">
+                <div class="card-glass-title">Próximas horas</div>
+                <span class="pill pill-blue">Hoje</span>
+              </div>
+
+              <div id="listaHoras">
+                <!-- Itens gerados via JS -->
+              </div>
+            </div>
+          </section>
+
+          <!-- Qualidade do ar -->
+          <section class="col-md-6">
+            <div class="card-glass">
+              <div class="card-glass-header">
+                <div class="card-glass-title">Qualidade do ar</div>
+                <span class="pill pill-green" id="qualidadeCategoria">--</span>
+              </div>
+
+              <div class="row gy-2">
+                <div class="col-6">
+                  <div class="metric-label">Índice</div>
+                  <div class="metric-value" id="qualidadeIndice">--</div>
+                </div>
+                <div class="col-6">
+                  <div class="metric-label">PM2.5</div>
+                  <div class="metric-value" id="pm25">-- µg/m³</div>
+                </div>
+                <div class="col-6">
+                  <div class="metric-label">PM10</div>
+                  <div class="metric-value" id="pm10">-- µg/m³</div>
+                </div>
+                <div class="col-6">
+                  <div class="metric-label">O₃</div>
+                  <div class="metric-value" id="o3">-- µg/m³</div>
+                </div>
+                <div class="col-6">
+                  <div class="metric-label">NO₂</div>
+                  <div class="metric-value" id="no2">-- µg/m³</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <!-- Bolsas de valores (XML) -->
+<section class="col-12 mt-2">
+  <div class="card-glass">
+    <div class="card-glass-header">
+      <div>
+        <div class="card-glass-title">Bolsas de valores</div>
+        <div class="temp-secondary mt-1">
+          Dados carregados de <code>exchanges.xml</code>
+        </div>
+      </div>
+      <span class="pill pill-blue" id="totalExchanges">0 mercados</span>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-dark table-sm align-middle mb-0">
+        <thead>
+          <tr>
+            <th>Sigla</th>
+            <th>MIC</th>
+            <th>País</th>
+            <th>Cidade</th>
+            <th>Cap. (tri USD)</th>
+            <th>Empresas</th>
+            <th>Vol. diário (bi)</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaExchanges">
+          <tr>
+            <td colspan="7" class="text-center text-muted">
+              Carregando dados de bolsas...
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+        </div>
+
+        <div class="footer mt-3">
+          WeatherBoard • Dados carregados de <code>database.json</code>.
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Carrega o JSON da MESMA pasta (index.html + database.json)
+    fetch('./database.json')
+      .then((res) => res.json())
+      .then((data) => {
+        const clima = data.clima;
+        const atuais = clima.condicoes_atuais;
+        const metadata = data.metadata;
+        const qualidade = clima.qualidade_ar;
+
+        // Sider
+        document.getElementById('cidade').textContent = clima.cidade;
+        document.getElementById('atualizado').textContent =
+          'Atualizado em ' + (metadata?.atualizado_em || '--');
+
+        // Cabeçalho do card principal
+        document.getElementById('dataDescricao').textContent =
+          clima.data +
+          ' • ' +
+          (atuais.condicao || '');
+
+        document.getElementById('statusClima').textContent =
+          atuais.condicao || '--';
+
+        // Dados principais
+        document.getElementById('tempAtual').textContent =
+          (atuais.temperatura ?? '--') + '°';
+        document.getElementById('sensacao').textContent =
+          (atuais.sensacao_termica ?? '--') + '°';
+        document.getElementById('pontoOrvalho').textContent =
+          (atuais.ponto_orvalho ?? '--') + '°';
+
+        document.getElementById('umidade').textContent =
+          (atuais.umidade ?? '--') + '%';
+        document.getElementById('pressao').textContent =
+          (atuais.pressao ?? '--') + ' hPa';
+        document.getElementById('ventoVel').textContent =
+          (atuais.vento_velocidade ?? '--') + ' km/h';
+        document.getElementById('ventoDir').textContent =
+          (atuais.vento_direcao ?? '--') + '°';
+
+        document.getElementById('precipitacao').textContent =
+          (atuais.precipitacao ?? '--') + ' mm';
+        document.getElementById('uv').textContent =
+          atuais.uv_indice ?? '--';
+
+        // Previsão por hora
+        const listaHoras = document.getElementById('listaHoras');
+        listaHoras.innerHTML = '';
+
+        (clima.previsao_horas || []).forEach((h) => {
+          const div = document.createElement('div');
+          div.className =
+            'forecast-item d-flex justify-content-between';
+          div.innerHTML = `
+            <span>${h.hora} • ${h.condicao}</span>
+            <span class="forecast-temp">${h.temperatura}°</span>
+          `;
+          listaHoras.appendChild(div);
+        });
+
+        // Qualidade do ar
+        document.getElementById('qualidadeCategoria').textContent =
+          qualidade.categoria || '---';
+        document.getElementById('qualidadeIndice').textContent =
+          qualidade.indice ?? '--';
+        document.getElementById('pm25').textContent =
+          qualidade.pm25 + ' µg/m³';
+        document.getElementById('pm10').textContent =
+          qualidade.pm10 + ' µg/m³';
+        document.getElementById('o3').textContent =
+          qualidade.o3 + ' µg/m³';
+        document.getElementById('no2').textContent =
+          qualidade.no2 + ' µg/m³';
+      })
+      .catch((err) => {
+        console.error('Erro ao carregar database.json', err);
+      });
+  </script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>

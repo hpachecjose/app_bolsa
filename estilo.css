@@ -1,0 +1,226 @@
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1b2735 0%, #090a0f 60%, #050608 100%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Layout inspirado no Ant Design: header fixo + sider + content */
+.app-header {
+  height: 64px;
+  background: #001529;
+  color: #fff;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-header .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.app-header .brand-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #40a9ff, #73d13d);
+  box-shadow: 0 4px 10px rgba(64, 169, 255, 0.6);
+}
+
+.app-header nav a {
+  color: #d9d9d9;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.app-header nav a.active {
+  color: #40a9ff;
+  border-bottom: 2px solid #40a9ff;
+  padding-bottom: 0.25rem;
+}
+
+.app-layout {
+  margin-top: 1.5rem;
+}
+
+/* Sider inspirado no Layout.Sider */
+.app-sider {
+  background: #001529;
+  border-radius: 16px;
+  padding: 1.25rem 0.75rem;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 80px;
+}
+
+.sider-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8c8c8c;
+  margin-bottom: 0.75rem;
+  padding: 0 0.75rem;
+}
+
+.sider-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sider-menu li {
+  margin-bottom: 0.25rem;
+}
+
+.sider-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  color: #d9d9d9;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-out;
+}
+
+.sider-link span.icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.sider-link:hover,
+.sider-link.active {
+  background: linear-gradient(120deg, #1890ff, #722ed1);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(24, 144, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Cartões com sombras no estilo EnjoyCSS */
+.card-glass {
+  background: rgba(9, 17, 31, 0.88);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  color: #f0f0f0;
+}
+
+.card-glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-glass-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8c8c8c;
+}
+
+.pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.pill-green {
+  background: rgba(82, 196, 26, 0.18);
+  color: #52c41a;
+  border: 1px solid rgba(82, 196, 26, 0.45);
+  box-shadow: 0 0 15px rgba(82, 196, 26, 0.4);
+}
+
+.pill-blue {
+  background: rgba(24, 144, 255, 0.18);
+  color: #40a9ff;
+  border: 1px solid rgba(24, 144, 255, 0.45);
+  box-shadow: 0 0 15px rgba(24, 144, 255, 0.4);
+}
+
+.temp-main {
+  font-size: 3.4rem;
+  font-weight: 600;
+  line-height: 1;
+  text-shadow:
+    0 0 15px rgba(24, 144, 255, 0.9),
+    0 0 30px rgba(24, 144, 255, 0.6);
+}
+
+.temp-secondary {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #8c8c8c;
+}
+
+.metric-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.metric-chip {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.forecast-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.forecast-item:last-child {
+  border-bottom: none;
+}
+
+.forecast-temp {
+  font-weight: 500;
+  color: #40a9ff;
+}
+
+.footer {
+  color: #595959;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.5rem 0 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .app-sider {
+    margin-bottom: 1rem;
+    position: static;
+  }
+}

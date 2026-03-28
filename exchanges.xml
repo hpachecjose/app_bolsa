@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stockExchanges updatedAt="2026-01-17T23:57:00-03:00" currency="USD">
+  <!-- América do Norte -->
+  <exchange
+    id="NYSE"
+    mic="XNYS"
+    country="USA"
+    city="New York"
+    timezone="America/New_York"
+    marketCapTrillion="30.5"
+    listedCompanies="2200"
+    dailyVolumeBillion="65.2"
+    electronic="true" />
+
+  <exchange
+    id="NASDAQ"
+    mic="XNAS"
+    country="USA"
+    city="New York"
+    timezone="America/New_York"
+    marketCapTrillion="25.1"
+    listedCompanies="3500"
+    dailyVolumeBillion="70.8"
+    electronic="true" />
+
+  <exchange
+    id="TSX"
+    mic="XTSE"
+    country="Canada"
+    city="Toronto"
+    timezone="America/Toronto"
+    marketCapTrillion="3.2"
+    listedCompanies="1500"
+    dailyVolumeBillion="7.4"
+    electronic="true" />
+
+  <!-- Europa -->
+  <exchange
+    id="LSE"
+    mic="XLON"
+    country="United Kingdom"
+    city="London"
+    timezone="Europe/London"
+    marketCapTrillion="4.1"
+    listedCompanies="1800"
+    dailyVolumeBillion="9.8"
+    electronic="true" />
+
+  <exchange
+    id="EURONEXT"
+    mic="XPAR"
+    country="Eurozone"
+    city="Paris"
+    timezone="Europe/Paris"
+    marketCapTrillion="6.0"
+    listedCompanies="1900"
+    dailyVolumeBillion="11.3"
+    electronic="true" />
+
+  <exchange
+    id="DEUTSCHE_BOERSE"
+    mic="XETR"
+    country="Germany"
+    city="Frankfurt"
+    timezone="Europe/Berlin"
+    marketCapTrillion="2.5"
+    listedCompanies="800"
+    dailyVolumeBillion="6.1"
+    electronic="true" />
+
+  <exchange
+    id="SIX"
+    mic="XSWX"
+    country="Switzerland"
+    city="Zurich"
+    timezone="Europe/Zurich"
+    marketCapTrillion="1.7"
+    listedCompanies="250"
+    dailyVolumeBillion="3.2"
+    electronic="true" />
+
+  <!-- Ásia -->
+  <exchange
+    id="TSE"
+    mic="XTKS"
+    country="Japan"
+    city="Tokyo"
+    timezone="Asia/Tokyo"
+    marketCapTrillion="5.5"
+    listedCompanies="3700"
+    dailyVolumeBillion="15.9"
+    electronic="true" />
+
+  <exchange
+    id="SSE"
+    mic="XSHG"
+    country="China"
+    city="Shanghai"
+    timezone="Asia/Shanghai"
+    marketCapTrillion="5.1"
+    listedCompanies="1800"
+    dailyVolumeBillion="20.4"
+    electronic="true" />
+
+  <exchange
+    id="SZSE"
+    mic="XSHE"
+    country="China"
+    city="Shenzhen"
+    timezone="Asia/Shanghai"
+    marketCapTrillion="3.7"
+    listedCompanies="2600"
+    dailyVolumeBillion="18.3"
+    electronic="true" />
+
+  <exchange
+    id="HKEX"
+    mic="XHKG"
+    country="Hong Kong"
+    city="Hong Kong"
+    timezone="Asia/Hong_Kong"
+    marketCapTrillion="4.0"
+    listedCompanies="2200"
+    dailyVolumeBillion="16.7"
+    electronic="true" />
+
+  <exchange
+    id="NSE"
+    mic="XNSE"
+    country="India"
+    city="Mumbai"
+    timezone="Asia/Kolkata"
+    marketCapTrillion="3.8"
+    listedCompanies="1700"
+    dailyVolumeBillion="12.2"
+    electronic="true" />
+
+  <exchange
+    id="BSE"
+    mic="XBOM"
+    country="India"
+    city="Mumbai"
+    timezone="Asia/Kolkata"
+    marketCapTrillion="3.2"
+    listedCompanies="5000"
+    dailyVolumeBillion="5.9"
+    electronic="true" />
+
+  <exchange
+    id="KRX"
+    mic="XKRX"
+    country="South Korea"
+    city="Seoul"
+    timezone="Asia/Seoul"
+    marketCapTrillion="2.3"
+    listedCompanies="2200"
+    dailyVolumeBillion="9.1"
+    electronic="true" />
+
+  <exchange
+    id="ASX"
+    mic="XASX"
+    country="Australia"
+    city="Sydney"
+    timezone="Australia/Sydney"
+    marketCapTrillion="1.9"
+    listedCompanies="2000"
+    dailyVolumeBillion="4.3"
+    electronic="true" />
+
+  <!-- América Latina -->
+  <exchange
+    id="B3"
+    mic="BVMF"
+    country="Brazil"
+    city="São Paulo"
+    timezone="America/Sao_Paulo"
+    marketCapTrillion="0.9"
+    listedCompanies="450"
+    dailyVolumeBillion="3.7"
+    electronic="true" />
+
+  <exchange
+    id="MEXI"
+    mic="XMEX"
+    country="Mexico"
+    city="Mexico City"
+    timezone="America/Mexico_City"
+    marketCapTrillion="0.6"
+    listedCompanies="150"
+    dailyVolumeBillion="1.8"
+    electronic="true" />
+
+  <!-- África e Oriente Médio -->
+  <exchange
+    id="JSE"
+    mic="XJSE"
+    country="South Africa"
+    city="Johannesburg"
+    timezone="Africa/Johannesburg"
+    marketCapTrillion="1.2"
+    listedCompanies="400"
+    dailyVolumeBillion="1.5"
+    electronic="true" />
+
+  <exchange
+    id="TADAWUL"
+    mic="XSAU"
+    country="Saudi Arabia"
+    city="Riyadh"
+    timezone="Asia/Riyadh"
+    marketCapTrillion="3.0"
+    listedCompanies="200"
+    dailyVolumeBillion="2.6"
+    electronic="true" />
+</stockExchanges>

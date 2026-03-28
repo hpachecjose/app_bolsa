@@ -1,0 +1,97 @@
+{
+  "clima": {
+    "cidade": "Vitória, ES",
+    "data": "2026-01-17",
+    "horario": "23:46",
+    "unidade": "Celsius",
+    "condicoes_atuais": {
+      "temperatura": 26.5,
+      "sensacao_termica": 28.2,
+      "umidade": 78,
+      "pressao": 1013.7,
+      "vento_velocidade": 12.4,
+      "vento_direcao": 180,
+      "visibilidade": 10,
+      "precipitacao": 0.0,
+      "uv_indice": 0,
+      "ponto_orvalho": 22.1,
+      "condicao": "Parcialmente nublado"
+    },
+    "temperatura_detalhes": {
+      "minima_dia": 23.8,
+      "maxima_dia": 29.4,
+      "minima_noite": 24.2,
+      "maxima_noite": 27.1
+    },
+    "previsao_horas": [
+      {
+        "hora": "00:00",
+        "temperatura": 26.1,
+        "condicao": "Nublado",
+        "precipitacao": 0.1,
+        "vento": 10.5
+      },
+      {
+        "hora": "03:00",
+        "temperatura": 25.7,
+        "condicao": "Chuva leve",
+        "precipitacao": 1.2,
+        "vento": 8.9
+      },
+      {
+        "hora": "06:00",
+        "temperatura": 25.2,
+        "condicao": "Parcialmente nublado",
+        "precipitacao": 0.0,
+        "vento": 7.3
+      }
+    ],
+    "previsao_dias": [
+      {
+        "dia": "Domingo",
+        "data": "2026-01-18",
+        "min": 24.5,
+        "max": 30.2,
+        "condicao": "Sol com nuvens",
+        "precipitacao": 2.4,
+        "umidade_max": 85
+      },
+      {
+        "dia": "Segunda",
+        "data": "2026-01-19",
+        "min": 25.1,
+        "max": 31.8,
+        "condicao": "Chuvoso",
+        "precipitacao": 12.7,
+        "umidade_max": 92
+      }
+    ],
+    "qualidade_ar": {
+      "pm25": 18.4,
+      "pm10": 32.1,
+      "o3": 45.6,
+      "no2": 23.7,
+      "indice": 2,
+      "categoria": "Boa"
+    },
+    "alertas": [
+      {
+        "tipo": "chuva_forte",
+        "intensidade": 3,
+        "regiao": "litoral",
+        "validade": "24h"
+      }
+    ],
+    "historico_24h": {
+      "temperatura_media": 27.3,
+      "precipitacao_total": 3.8,
+      "vento_max": 18.2
+    }
+  },
+  "metadata": {
+    "fonte": "API Clima Local",
+    "atualizado_em": "2026-01-17T23:46:00-03:00",
+    "timezone": "America/Sao_Paulo",
+    "versao": "2.1"
+  }
+}
