@@ -65,5 +65,5 @@ Como o projeto realiza requisições `.fetch()` para ler arquivos locais (`datab
 Contribuições são bem-vindas! Se você deseja reportar algum problema, sugerir melhorias ou enviar *pull requests*, sinta-se livre para criar uma *Issue*.
 
 ---
-Feito com ☕ por Henri.
+Feito com ☕ por Henrique Dev.
 #
